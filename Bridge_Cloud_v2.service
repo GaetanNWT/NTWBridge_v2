@@ -1,0 +1,15 @@
+#!/bin/sh
+[Unit]
+Description=NWT Bridge Cloud service V2
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart=/home/ubuntu/Bridge_Cloud/Python_to_labview_v5.py
+
+[Install]
+WantedBy=multi-user.target
